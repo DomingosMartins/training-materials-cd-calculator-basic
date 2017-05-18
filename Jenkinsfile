@@ -22,5 +22,11 @@ pipeline {
       }
     }
 
+    stage("DockerBuild") {
+      steps {
+        sh "docker build -t testdocker ."
+      }
+    }
+
   }
 }
